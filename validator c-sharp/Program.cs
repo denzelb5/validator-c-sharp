@@ -95,6 +95,52 @@ namespace RegualtExpression
 
                 Console.WriteLine(wackyQuote);
 
+                // Power Rangers
+
+                Console.WriteLine("Are you a Power Ranger?  What's your name?");
+                var enteredName = Console.ReadLine();
+
+                switch (enteredName)
+                {
+                    case "Zack Taylor":
+                        Console.WriteLine("Hello Power Ranger!");
+                        break;
+                    case "Jason Lee Scott":
+                        Console.WriteLine("Hello Power Ranger!");
+                        break;
+                    case "Kimberly Hart":
+                        Console.WriteLine("Hello Power Ranger!");
+                        break;
+                    case "Trini Kwan":
+                        Console.WriteLine("Hello Power Ranger!");
+                        break;
+                    case "Billy Cranston":
+                        Console.WriteLine("Hello Power Ranger!");
+                        break;
+                    default:
+                        Console.WriteLine("You are not a Power Ranger, but maybe someday you will be");
+                        break;
+                }
+
+                // Palindrome
+
+                Console.WriteLine("Enter a word to determine if it's a palindrome.");
+                string string1, rev;
+                string1 = Console.ReadLine();
+                char[] ch = string1.ToCharArray();
+                Array.Reverse(ch);
+                rev = new string(ch);
+                bool b = string1.Equals(rev, StringComparison.OrdinalIgnoreCase);
+                if (b == true)
+                {
+                    Console.WriteLine("" + string1 + " is a Palindrome!");
+                }
+                else
+                {
+                    Console.WriteLine(" " + string1 + " is not a Palindrome!");
+                }
+                Console.Read();
+
             }
 
             public static bool IsPhoneNumber(string number)
